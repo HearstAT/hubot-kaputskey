@@ -17,6 +17,7 @@
   },
 
   "dependencies": {
+    "simple-ssh": "^0.8.6"
   },
 
   "peerDependencies": {
