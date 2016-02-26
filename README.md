@@ -1,4 +1,5 @@
 # hubot-kaputskey
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
 A hubot script to clean out after de-provisioning
 
@@ -54,7 +55,16 @@ hubot> user1: OK, Shell has the 'kaputskey' role.
 ```
 user1>> hubot kaputskey confirm hubot_localhost
 hubot> Beginning removal of hubot_localhost
- Successful removal of services on host hubot_localhost
- Successful removal of host hubot_localhost
- Successful reconfigure of host hubot_localhost
+ Successful removal of NagiosXI services on host hubot_localhost
+ Successful removal of host hubot_localhost on NagiosXI 
+ Successful reconfigure of host hubot_localhost on NagiosXI 
 ```
+
+
+
+[npm-url]: https://www.npmjs.org/package/hubot-sumologic
+[npm-image]: http://img.shields.io/npm/v/hubot-sumologic.svg?style=flat
+[travis-url]: https://travis-ci.org/HearstAT/hubot-sumologic
+[travis-image]: https://travis-ci.org/HearstAT/hubot-sumologic.svg?branch=master
+[coveralls-url]: https://coveralls.io/r/HearstAT/hubot-sumologic
+[coveralls-image]: http://img.shields.io/coveralls/HearstAT/hubot-sumologic/master.svg?style=flat

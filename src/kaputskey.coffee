@@ -83,7 +83,7 @@ module.exports = (robot) ->
           return
         exit: (code) ->
           code_message = switch code
-            when 0 then "Successful removal of services on host #{nagios_host}"
+            when 0 then "Successful removal of NagiosXI services on host #{nagios_host}"
             when 1 then "Could not remove services on host #{nagios_host} ERROR: Usage error - ensure host exists at #{nagiosXIuiURL}"
             when 2 then "Could not remove services on host #{nagios_host} ERROR: DB connection failed"
             when 3 then "Could not remove services on host #{nagios_host} ERROR: Dependent relationship"
@@ -101,7 +101,7 @@ module.exports = (robot) ->
           return
         exit: (code) ->
           code_message = switch code
-            when 0 then "Successful removal of host #{nagios_host}"
+            when 0 then "Successful removal of host #{nagios_host} on NagiosXI "
             when 1 then "Could not remove host #{nagios_host} ERROR: Usage error - ensure host exists at #{nagiosXIuiURL}"
             when 2 then "Could not remove host #{nagios_host} ERROR: DB connection failed"
             when 3 then "Could not remove host #{nagios_host} ERROR: Dependent relationship"
@@ -119,7 +119,7 @@ module.exports = (robot) ->
           return
         exit: (code) ->
           code_message = switch code
-            when 0 then "Successful reconfigure of host #{nagios_host}"
+            when 0 then "Successful reconfigure of host #{nagios_host} on NagiosXI"
             when 1 then "Could not reconfigure host #{nagios_host} ERROR: config verification failed"
             when 2 then "Could not reconfigure host #{nagios_host} ERROR: nagiosql login failed"
             when 3 then "Could not reconfigure host #{nagios_host} ERROR: nagiosql import failed"
