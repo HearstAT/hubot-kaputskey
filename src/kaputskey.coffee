@@ -28,17 +28,6 @@ nagiosXIuiURL = process.env.HUBOT_NAGIOSXI_UI_URL
 
 module.exports = (robot) ->
 
-  unless process.env.HUBOT_AUTH_ADMIN?
-    return robot.logger.error "HUBOT_NAGIOSXI_HOST env var not set."
-  unless process.env.HUBOT_NAGIOSXI_HOST?
-    return robot.logger.error "HUBOT_NAGIOSXI_HOST env var not set."
-  unless process.env.HUBOT_NAGIOSXI_USER?
-    return robot.logger.error "HUBOT_NAGIOSXI_USER env var not set."
-  unless process.env.HUBOT_NAGIOSXI_PASSWORD?
-    return robot.logger.error "HUBOT_NAGIOSXI_PASSWORD env var not set."
-  unless process.env.HUBOT_NAGIOSXI_UI_URL?
-    return robot.logger.error "HUBOT_NAGIOSXI_UI_URL env var not set."
-
   robot.respond /kaputskey server (.+)/i, (msg) ->
     nagios_host = msg.match[1]
     robot_name = robot.alias or robot.name or 'hubot'
