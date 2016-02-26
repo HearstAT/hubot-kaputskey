@@ -52,7 +52,7 @@ module.exports = (robot) ->
     nagios_host = msg.match[1]
     robot_name = robot.alias or robot.name or 'hubot'
     current_request = robot.brain.get 'currentRequest'
-    console.log "#{msg.user.name} (email #{msg.user.email}) confirmed that #{nagios_host} be removed from nagios"
+    console.log "#{msg.message.user.name} (email #{msg.message.user.email}) confirmed that #{nagios_host} be removed from nagios"
     if current_request != nagios_host
       msg.send(nagios_host + ' was not the last server requested to be removed. \n' +
                   'Someone will need to request this first: \n' +

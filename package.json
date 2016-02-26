@@ -1,7 +1,7 @@
 {
   "name": "hubot-kaputskey",
   "description": "A hubot script to clean out after de-provisioning",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "atat@hearst.com",
   "license": "MIT",
 
