@@ -12,8 +12,8 @@ describe 'kaputskey', ->
 
     require('../src/kaputskey')(@robot)
 
-  it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
+  it 'registers a kaputskey server listener', ->
+    expect(@robot.respond).to.have.been.calledWith(/kaputskey server (.+)/i)
 
-  it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+  it 'registers a kaputskey server listener', ->
+    expect(@robot.respond).to.have.been.calledWith(/kaputskey confirm (.+)/i)
